@@ -113,32 +113,34 @@ const Controls = ({
               cursor: 'pointer'
             }}
           />
-          <style jsx>{`
-            input[type="range"]::-webkit-slider-thumb {
-              appearance: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              cursor: pointer;
-              box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-              transition: all 0.3s ease;
-            }
-            input[type="range"]::-webkit-slider-thumb:hover {
-              transform: scale(1.1);
-              box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
-            }
-            input[type="range"]::-moz-range-thumb {
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-              cursor: pointer;
-              box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-              transition: all 0.3s ease;
-              border: none;
-            }
-          `}</style>
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              input[type="range"]::-webkit-slider-thumb {
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+                transition: all 0.3s ease;
+              }
+              input[type="range"]::-webkit-slider-thumb:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+              }
+              input[type="range"]::-moz-range-thumb {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+                transition: all 0.3s ease;
+                border: none;
+              }
+            `
+          }} />
         </div>
       </div>
 

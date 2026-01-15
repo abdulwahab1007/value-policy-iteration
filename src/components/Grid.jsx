@@ -10,7 +10,7 @@ const Grid = ({
   showPolicy 
 }) => {
   // Calculate min and max values for heatmap normalization
-  const allValues = [];Ameee 
+  const allValues = []; 
   for (let i = 0; i < GRID_SIZE; i++) {
     for (let j = 0; j < GRID_SIZE; j++) {
       const cellType = getCellType(grid[i][j]);
