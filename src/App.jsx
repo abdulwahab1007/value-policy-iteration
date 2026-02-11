@@ -107,13 +107,45 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <header className="app-header">
-        <h1>Grid-World MDP Visualization</h1>
-        <p>Value Iteration & Policy Iteration Algorithms</p>
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+    }}>
+      <header style={{
+        padding: '32px 24px',
+        textAlign: 'center',
+        background: 'rgba(255, 255, 255, 0.1)',
+        backdropFilter: 'blur(10px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
+      }}>
+        <h1 style={{ 
+          margin: '0 0 8px 0', 
+          color: '#ffffff',
+          fontSize: '2.5rem',
+          fontWeight: '700',
+          letterSpacing: '-0.02em',
+          textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+        }}>Grid-World MDP Visualization</h1>
+        <p style={{ 
+          margin: '0', 
+          color: 'rgba(255, 255, 255, 0.9)',
+          fontSize: '1.1rem',
+          fontWeight: '500'
+        }}>Value Iteration & Policy Iteration Algorithms</p>
       </header>
 
-      <main className="app-main">
+      <main style={{
+        padding: '20px',
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        gap: '20px',
+        flex: 1,
+        minHeight: 'calc(100vh - 200px)',
+        width: '100%'
+      }}>
         <div className="controls-section">
           <Controls
             algorithm={algorithm}
@@ -148,23 +180,46 @@ function App() {
             <div className="stat-item">
               <strong>Algorithm:</strong> {algorithm === 'value' ? 'Value Iteration' : 'Policy Iteration'}
             </div>
-            <div className="stat-item">
+            <div style={{ 
+              marginBottom: '8px',
+              fontSize: '0.95rem',
+              color: '#4a5568',
+              fontWeight: '500'
+            }}>
               <strong>Iteration:</strong> {iteration}
             </div>
             {algorithm === 'policy' && (
-              <div className="stat-item">
+              <div style={{ 
+                marginBottom: '8px',
+                fontSize: '0.95rem',
+                color: '#4a5568',
+                fontWeight: '500'
+              }}>
                 <strong>Evaluation Iterations:</strong> {evaluationIterations}
               </div>
             )}
-            <div className="stat-item">
+            <div style={{ 
+              marginBottom: '8px',
+              fontSize: '0.95rem',
+              color: '#4a5568',
+              fontWeight: '500'
+            }}>
               <strong>Discount Factor (γ):</strong> {discount.toFixed(2)}
             </div>
-            <div className="stat-item">
+            <div style={{ 
+              fontSize: '0.95rem',
+              color: '#4a5568',
+              fontWeight: '500'
+            }}>
               <strong>Status:</strong> {converged ? '✓ Converged' : isRunning ? 'Running...' : 'Ready'}
             </div>
           </div>
 
-          <div className="visualizations">
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '20px'
+          }}>
             <ValueHeatmap values={values} grid={grid} />
             <PolicyArrows policy={policy} grid={grid} />
           </div>

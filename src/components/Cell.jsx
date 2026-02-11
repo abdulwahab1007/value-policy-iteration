@@ -15,8 +15,8 @@ const Cell = ({
   // Get cell styling based on type
   const getCellStyle = () => {
     const baseStyle = {
-      width: '80px',
-      height: '80px',
+      width: '70px',
+      height: '70px',
       border: '1px solid rgba(255, 255, 255, 0.2)',
       display: 'flex',
       flexDirection: 'column',

@@ -58,7 +58,7 @@ const PolicyArrows = ({ policy, grid }) => {
       <div 
         style={{
           display: 'grid',
-          gridTemplateColumns: `repeat(${GRID_SIZE}, 60px)`,
+          gridTemplateColumns: `repeat(${GRID_SIZE}, 50px)`,
           gap: '8px',
           background: 'rgba(255, 255, 255, 0.3)',
           padding: '16px',
@@ -75,8 +75,8 @@ const PolicyArrows = ({ policy, grid }) => {
               <div
                 key={`${rowIndex}-${colIndex}`}
                 style={{
-                  width: '60px',
-                  height: '60px',
+                  width: '50px',
+                  height: '50px',
                   backgroundColor: cellType === 'obstacle' ? 'linear-gradient(135deg, #4a5568 0%, #2d3748 100%)' : 
                                  cellType === 'goal' ? 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)' : 
                                  cellType === 'negative_terminal' ? 'linear-gradient(135deg, #f56565 0%, #e53e3e 100%)' : 'rgba(255, 255, 255, 0.9)',

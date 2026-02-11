@@ -90,7 +90,7 @@ const ValueHeatmap = ({ values, grid }) => {
       <div 
         style={{
           display: 'grid',
-          gridTemplateColumns: `repeat(${GRID_SIZE}, 50px)`,
+          gridTemplateColumns: `repeat(${GRID_SIZE}, 40px)`,
           gap: '8px',
           background: 'rgba(255, 255, 255, 0.3)',
           padding: '16px',
@@ -132,8 +132,8 @@ const ValueHeatmap = ({ values, grid }) => {
               <div
                 key={`${rowIndex}-${colIndex}`}
                 style={{
-                  width: '50px',
-                  height: '50px',
+                  width: '65px',
+                  height: '65px',
                   backgroundColor: getValueColor(value),
                   display: 'flex',
                   alignItems: 'center',
